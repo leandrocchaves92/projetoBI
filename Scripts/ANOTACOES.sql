@@ -726,3 +726,11 @@ GO
 ------------------------------------------------------------------------------------------
 USE COMERCIO_OLTP
 GO
+
+-- NO INTEGRATION SERVICES
+ALTER TABLE [dbo].[ST_CLIENTE]
+	ADD EMAIL VARCHAR (100)
+GO
+
+CREATE DATABASE BI_ERROR
+GO
