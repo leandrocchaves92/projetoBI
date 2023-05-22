@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CARGA_VENDEDOR"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{177F9F08-34A2-4961-A4E2-57B7DBD041C6}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{FF688EE3-0C1A-411C-934C-36BB81B98889}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -656,37 +656,25 @@ FROM     VENDEDOR</property>
         <NodeLayout
           Size="132.8,41.6"
           Id="Package\STAGE VENDEDOR\VENDEDOR"
-          TopLeft="57.8571429803056,55.0588234811506" />
+          TopLeft="21.4285714741873,69.5882352331208" />
         <NodeLayout
           Size="174.4,41.6"
           Id="Package\STAGE VENDEDOR\TRATAMENTO SEXO"
-          TopLeft="262.14285770089,124.647058714271" />
+          TopLeft="284.285714890884,71.8823528781688" />
         <EdgeLayout
           Id="Package\STAGE VENDEDOR.Paths[Saída de Origem OLE DB]"
-          TopLeft="124.257142980306,96.6588234811506">
+          TopLeft="154.228571474187,91.5352940556448">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="225.085714720585,27.9882352331209"
+              EndConnector="130.057143416697,0"
               Start="0,0"
-              End="225.085714720585,20.4882352331209">
+              End="122.557143416697,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,9.99411761656044" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.99411761656044"
-                    Point2="0,13.9941176165604"
-                    Point3="4,13.9941176165604" />
-                  <mssgle:LineSegment
-                    End="221.085714720585,13.9941176165604" />
-                  <mssgle:CubicBezierSegment
-                    Point1="221.085714720585,13.9941176165604"
-                    Point2="225.085714720585,13.9941176165604"
-                    Point3="225.085714720585,17.9941176165604" />
-                  <mssgle:LineSegment
-                    End="225.085714720585,20.4882352331209" />
+                    End="122.557143416697,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -698,37 +686,25 @@ FROM     VENDEDOR</property>
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\STAGE VENDEDOR\ST_VENDEDOR"
-          TopLeft="302.14285778604,328.058823241856" />
+          TopLeft="301.428572070234,252.352940955273" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\STAGE VENDEDOR\Conversão de Dados"
-          TopLeft="299.285714922815,203.411764527584" />
+          TopLeft="282.857143459271,161.352941035038" />
         <EdgeLayout
           Id="Package\STAGE VENDEDOR.Paths[Saída de Coluna Derivada]"
-          TopLeft="349.34285770089,166.247058714271">
+          TopLeft="370.971429175078,113.482352878169">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.5428572219246,37.1647058133126"
+              EndConnector="0,47.8705881568697"
               Start="0,0"
-              End="37.5428572219246,29.6647058133126">
+              End="0,40.3705881568697">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.5823529066563" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.5823529066563"
-                    Point2="0,18.5823529066563"
-                    Point3="4,18.5823529066563" />
-                  <mssgle:LineSegment
-                    End="33.5428572219246,18.5823529066563" />
-                  <mssgle:CubicBezierSegment
-                    Point1="33.5428572219246,18.5823529066563"
-                    Point2="37.5428572219246,18.5823529066563"
-                    Point3="37.5428572219246,22.5823529066563" />
-                  <mssgle:LineSegment
-                    End="37.5428572219246,29.6647058133126" />
+                    End="0,40.3705881568697" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -739,30 +715,18 @@ FROM     VENDEDOR</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\STAGE VENDEDOR.Paths[Saída de Conversão de Dados]"
-          TopLeft="386.885714922815,245.011764527584">
+          TopLeft="373.542857764753,202.952941035038">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9.54285713677478,83.0470587142715"
+              EndConnector="0,49.399999920235"
               Start="0,0"
-              End="-9.54285713677478,75.5470587142715">
+              End="0,41.899999920235">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5235293571357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.5235293571357"
-                    Point2="0,41.5235293571357"
-                    Point3="-4,41.5235293571357" />
-                  <mssgle:LineSegment
-                    End="-5.54285713677478,41.5235293571357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5.54285713677478,41.5235293571357"
-                    Point2="-9.54285713677478,41.5235293571357"
-                    Point3="-9.54285713677478,45.5235293571357" />
-                  <mssgle:LineSegment
-                    End="-9.54285713677478,75.5470587142715" />
+                    End="0,41.899999920235" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ACERNITRO5.BI_ERROR"
+  DTS:DTSID="{666225CF-3CB1-49EC-AF22-86B4B8352FF6}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ACERNITRO5;Initial Catalog=BI_ERROR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-CARGA_CLIENTE-{666225CF-3CB1-49EC-AF22-86B4B8352FF6}ACERNITRO5.BI_ERROR;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

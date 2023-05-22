@@ -11,48 +11,10 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CARGA_CLIENTE"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{AB10F2F7-795D-4D70-BA66-A3D18F003FD1}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{3BC69E9D-5A6B-4BB2-93B0-B04EA9F24768}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[ACERNITRO5.BI_ERROR]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{666225CF-3CB1-49EC-AF22-86B4B8352FF6}"
-      DTS:ObjectName="ACERNITRO5.BI_ERROR">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ACERNITRO5;Initial Catalog=BI_ERROR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-CARGA_CLIENTE-{666225CF-3CB1-49EC-AF22-86B4B8352FF6}ACERNITRO5.BI_ERROR;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}"
-      DTS:ObjectName="ACERNITRO5.COMERCIO_OLTP">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ACERNITRO5;Initial Catalog=COMERCIO_OLTP;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}ACERNITRO5.COMERCIO_OLTP;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[ACERNITRO5.COMERCIO_STAGE]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{F8E92EF0-177C-4B81-842C-17CC16E85078}"
-      DTS:ObjectName="ACERNITRO5.COMERCIO_STAGE">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=ACERNITRO5;Initial Catalog=COMERCIO_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{F8E92EF0-177C-4B81-842C-17CC16E85078}ACERNITRO5.COMERCIO_STAGE;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -120,8 +82,8 @@
               <connections>
                 <connection
                   refId="Package\STAGE CLIENTE\CLIENTE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
-                  connectionManagerRefId="Package.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
+                  connectionManagerID="{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
                   description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
                   name="OleDbConnection" />
               </connections>
@@ -454,8 +416,8 @@
               <connections>
                 <connection
                   refId="Package\STAGE CLIENTE\Destino OLE DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ACERNITRO5.BI_ERROR]"
-                  connectionManagerRefId="Package.ConnectionManagers[ACERNITRO5.BI_ERROR]"
+                  connectionManagerID="{666225CF-3CB1-49EC-AF22-86B4B8352FF6}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.BI_ERROR]"
                   description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
                   name="OleDbConnection" />
               </connections>
@@ -688,8 +650,8 @@ where [refTable].[ID_CLIENTE] = ?</property>
               <connections>
                 <connection
                   refId="Package\STAGE CLIENTE\PROCURA DE ENDEREÇO.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
-                  connectionManagerRefId="Package.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
+                  connectionManagerID="{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
                   description="O gerenciador de conexões usado para acessar dados de pesquisa."
                   name="OleDbConnection" />
               </connections>
@@ -1003,8 +965,8 @@ where [refTable].[ID_CLIENTE] = ?</property>
               <connections>
                 <connection
                   refId="Package\STAGE CLIENTE\ST_CKIENTE.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[ACERNITRO5.COMERCIO_STAGE]"
-                  connectionManagerRefId="Package.ConnectionManagers[ACERNITRO5.COMERCIO_STAGE]"
+                  connectionManagerID="{F8E92EF0-177C-4B81-842C-17CC16E85078}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_STAGE]"
                   description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
                   name="OleDbConnection" />
               </connections>
