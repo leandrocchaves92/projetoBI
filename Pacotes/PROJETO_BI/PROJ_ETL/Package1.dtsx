@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/25/2023 2:58:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ACERNITRO5"
+  DTS:CreatorName="ACERNITRO5\leand"
+  DTS:DTSID="{3013F90C-6ABF-4248-A1D5-086391A5B4E9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5209.0"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{CBB68BF9-4D6F-4C0F-892D-3D20F30C7EB6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>
