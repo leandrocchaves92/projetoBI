@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{1C740838-D19D-42A5-9837-AC79948FCBD6}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{8357DFF9-6DEE-4A80-B563-64F68F3D29CB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -183,8 +183,7 @@
                   dataType="System.String"
                   description="O comando SQL a ser executado."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [IDFORNECEDOR]
-      ,[NOME]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [IDFORNECEDOR]  ,[NOME]
   FROM [COMERCIO_OLTP].[dbo].[FORNECEDOR]</property>
                 <property
                   dataType="System.String"
@@ -342,13 +341,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="218.4,41.6"
-          Id="Package\TRUNCATE ST_FORNECEDOR"
-          TopLeft="132.142857424155,93.2941175652829" />
-        <NodeLayout
           Size="180,41.6"
           Id="Package\STAGE FORNECEDOR"
           TopLeft="158.571428908986,207.99999981768" />
+        <NodeLayout
+          Size="218.4,41.6"
+          Id="Package\TRUNCATE ST_FORNECEDOR"
+          TopLeft="132.142857424155,93.2941175652829" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="244.95714316657,134.894117565283">
@@ -382,25 +381,25 @@
         <NodeLayout
           Size="152,41.6"
           Id="Package\STAGE FORNECEDOR\Origem OLE DB"
-          TopLeft="139.285714582217,108.588235198936" />
+          TopLeft="130.000000276736,86.4117646301392" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\STAGE FORNECEDOR\Destino OLE DB"
-          TopLeft="139.285714582217,257.705882127052" />
+          TopLeft="122.857143118673,198.058823355806" />
         <EdgeLayout
           Id="Package\STAGE FORNECEDOR.Paths[Saída de Origem OLE DB]"
-          TopLeft="215.485714582217,150.188235198936">
+          TopLeft="202.628571697705,128.011764630139">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,107.517646928116"
+              EndConnector="0,70.0470587256663"
               Start="0,0"
-              End="0,100.017646928116">
+              End="0,62.5470587256663">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,100.017646928116" />
+                    End="0,62.5470587256663" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -413,14 +412,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STAGE FORNECEDOR\Origem OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\STAGE FORNECEDOR\Destino OLE DB">
     <Properties>
       <Property>
@@ -430,6 +421,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STAGE FORNECEDOR\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CARGA_NOTA"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{52F4B9EC-66F4-4F51-B22A-AA51652BF875}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{4AD6DF83-8BCF-4668-9166-D38F9554A2B0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -302,13 +302,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\TRUNCATE ST_NOTA"
-          TopLeft="237.857143363478,142.235293992972" />
-        <NodeLayout
           Size="140.8,41.6"
           Id="Package\STAGE NOTA"
           TopLeft="238.571429079285,241.647058611716" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\TRUNCATE ST_NOTA"
+          TopLeft="237.857143363478,142.235293992972" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="327.457143363478,183.835293992972">
@@ -352,39 +352,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\STAGE NOTA\Origem OLE DB"
-          TopLeft="188.571428972848,112.411764607349" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\STAGE NOTA\Destino OLE DB"
-          TopLeft="454.285715252769,126.176470477637" />
+          TopLeft="453.571429536963,77.2352940499476" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\STAGE NOTA\Origem OLE DB"
+          TopLeft="107.142857370936,71.8823528781687" />
         <EdgeLayout
           Id="Package\STAGE NOTA.Paths[Saída de Origem OLE DB]"
-          TopLeft="340.571428972848,133.211764607349">
+          TopLeft="259.142857370936,95.3588234640582">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="113.714286279922,13.7647058702876"
+              EndConnector="194.428572166026,0"
               Start="0,0"
-              End="106.214286279922,13.7647058702876">
+              End="186.928572166026,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.8571431399608,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="52.8571431399608,0"
-                    Point2="56.8571431399608,0"
-                    Point3="56.8571431399608,4" />
-                  <mssgle:LineSegment
-                    End="56.8571431399608,9.76470587028763" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56.8571431399608,9.76470587028763"
-                    Point2="56.8571431399608,13.7647058702876"
-                    Point3="60.8571431399608,13.7647058702876" />
-                  <mssgle:LineSegment
-                    End="106.214286279922,13.7647058702876" />
+                    End="186.928572166026,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -397,14 +385,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\STAGE NOTA\Origem OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\STAGE NOTA\Destino OLE DB">
     <Properties>
       <Property>
@@ -414,6 +394,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\STAGE NOTA\Origem OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

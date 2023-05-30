@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{FD5EF9A2-3497-4A44-B487-263C30C83F9B}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{10E0200B-93C4-442E-82AE-993E12585CE9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -42,11 +42,208 @@
               version="1">
               <components>
                 <component
-                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB"
+                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
+                  description="Origem OLE DB"
+                  name="OLTP CLIENTE"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="O comando SQL a ser executado."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT IDPRODUTO, PRODUTO, VALOR, CUSTO_MEDIO,ID_CATEGORIA
+ FROM [COMERCIO_OLTP].[dbo].[PRODUTO]</property>
+                    <property
+                      dataType="System.String"
+                      description="A variável que contém o comando SQL a ser executado."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica o modo usado para acessar o banco de dados."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Connections[OleDbConnection]"
+                      connectionManagerID="{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
+                      description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB]"
+                      name="Saída de Origem OLE DB">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[IDPRODUTO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]"
+                          name="IDPRODUTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUTO]"
+                          length="100"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]"
+                          name="PRODUTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[VALOR]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[VALOR]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[VALOR]"
+                          name="VALOR"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_MEDIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CATEGORIA]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]"
+                          name="ID_CATEGORIA"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[IDPRODUTO]"
+                          dataType="i4"
+                          name="IDPRODUTO" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="PRODUTO" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[VALOR]"
+                          dataType="numeric"
+                          name="VALOR"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CATEGORIA]"
+                          dataType="i4"
+                          name="ID_CATEGORIA" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB]"
+                      isErrorOut="true"
+                      name="Saída de Erro de Origem OLE DB">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[IDPRODUTO]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[IDPRODUTO]"
+                          name="IDPRODUTO" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUTO]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUTO]"
+                          name="PRODUTO" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[VALOR]"
+                          dataType="numeric"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[VALOR]"
+                          name="VALOR"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_MEDIO]"
+                          dataType="numeric"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_MEDIO]"
+                          name="CUSTO_MEDIO"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CATEGORIA]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CATEGORIA]"
+                          name="ID_CATEGORIA" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
                   description="Destino OLE DB"
-                  name="Destino OLE DB"
+                  name="STG CLIENTE"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -99,7 +296,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Connections[OleDbConnection]"
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Connections[OleDbConnection]"
                       connectionManagerID="{F8E92EF0-177C-4B81-842C-17CC16E85078}:external"
                       connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_STAGE]"
                       description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
@@ -107,75 +304,75 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB]"
                       errorOrTruncationOperation="Inserir"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Entrada de Destino OLE DB">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[IDPRODUTO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].Columns[IDPRODUTO]"
                           cachedDataType="i4"
                           cachedName="IDPRODUTO"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPRODUTO]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]" />
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPRODUTO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]" />
                         <inputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[CUSTO_MEDIO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].Columns[CUSTO_MEDIO]"
                           cachedDataType="numeric"
                           cachedName="CUSTO_MEDIO"
                           cachedPrecision="10"
                           cachedScale="2"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CUSTO_MEDIO]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]" />
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[CUSTO_MEDIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]" />
                         <inputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[ID_CATEGORIA]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].Columns[ID_CATEGORIA]"
                           cachedDataType="i4"
                           cachedName="ID_CATEGORIA"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_CATEGORIA]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]" />
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_CATEGORIA]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]" />
                         <inputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[PRODUTO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].Columns[PRODUTO]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="100"
                           cachedName="PRODUTO"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]" />
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]" />
                         <inputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[VALOR]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].Columns[VALOR]"
                           cachedDataType="numeric"
                           cachedName="VALOR"
                           cachedPrecision="10"
                           cachedScale="2"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VALOR_UNITARIO]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[VALOR]" />
+                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[VALOR_UNITARIO]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB].Columns[VALOR]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPRODUTO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[IDPRODUTO]"
                           dataType="i4"
                           name="IDPRODUTO" />
                         <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[NOME]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="NOME" />
                         <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[VALOR_UNITARIO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[VALOR_UNITARIO]"
                           dataType="numeric"
                           name="VALOR_UNITARIO"
                           precision="10"
                           scale="2" />
                         <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[CUSTO_MEDIO]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[CUSTO_MEDIO]"
                           dataType="numeric"
                           name="CUSTO_MEDIO"
                           precision="10"
                           scale="2" />
                         <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_CATEGORIA]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB].ExternalColumns[ID_CATEGORIA]"
                           dataType="i4"
                           name="ID_CATEGORIA" />
                       </externalMetadataColumns>
@@ -183,223 +380,22 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB]"
+                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Outputs[Saída de Erro de Destino OLE DB]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Saída de Erro de Destino OLE DB"
-                      synchronousInputId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]">
+                      synchronousInputId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
+                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
-                          name="ErrorColumn"
-                          specialFlags="2" />
-                      </outputColumns>
-                      <externalMetadataColumns />
-                    </output>
-                  </outputs>
-                </component>
-                <component
-                  refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB"
-                  componentClassID="Microsoft.OLEDBSource"
-                  contactInfo="Origem OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;7"
-                  description="Origem OLE DB"
-                  name="Origem OLE DB"
-                  usesDispositions="true"
-                  version="7">
-                  <properties>
-                    <property
-                      dataType="System.Int32"
-                      description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
-                      name="CommandTimeout">0</property>
-                    <property
-                      dataType="System.String"
-                      description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                      name="OpenRowset"></property>
-                    <property
-                      dataType="System.String"
-                      description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                      name="OpenRowsetVariable"></property>
-                    <property
-                      dataType="System.String"
-                      description="O comando SQL a ser executado."
-                      name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [IDPRODUTO]
-      ,[PRODUTO]
-      ,[VALOR]
-      ,[CUSTO_MEDIO]
-      ,[ID_CATEGORIA]
-  FROM [COMERCIO_OLTP].[dbo].[PRODUTO]</property>
-                    <property
-                      dataType="System.String"
-                      description="A variável que contém o comando SQL a ser executado."
-                      name="SqlCommandVariable"></property>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
-                      name="DefaultCodePage">1252</property>
-                    <property
-                      dataType="System.Boolean"
-                      description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
-                      name="AlwaysUseDefaultCodePage">false</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Especifica o modo usado para acessar o banco de dados."
-                      name="AccessMode"
-                      typeConverter="AccessMode">2</property>
-                    <property
-                      dataType="System.String"
-                      description="Os mapeamentos entre os parâmetros no comando SQL e as variáveis."
-                      name="ParameterMapping"></property>
-                  </properties>
-                  <connections>
-                    <connection
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Connections[OleDbConnection]"
-                      connectionManagerID="{32B847BF-7C0B-4ABF-B470-9050B7BE32C2}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[ACERNITRO5.COMERCIO_OLTP]"
-                      description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
-                      name="OleDbConnection" />
-                  </connections>
-                  <outputs>
-                    <output
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB]"
-                      name="Saída de Origem OLE DB">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversão"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[IDPRODUTO]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[IDPRODUTO]"
-                          name="IDPRODUTO"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversão"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUTO]"
-                          length="100"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[PRODUTO]"
-                          name="PRODUTO"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[VALOR]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversão"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[VALOR]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[VALOR]"
-                          name="VALOR"
-                          precision="10"
-                          scale="2"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversão"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_MEDIO]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[CUSTO_MEDIO]"
-                          name="CUSTO_MEDIO"
-                          precision="10"
-                          scale="2"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]"
-                          dataType="i4"
-                          errorOrTruncationOperation="Conversão"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CATEGORIA]"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].Columns[ID_CATEGORIA]"
-                          name="ID_CATEGORIA"
-                          truncationRowDisposition="FailComponent" />
-                      </outputColumns>
-                      <externalMetadataColumns
-                        isUsed="True">
-                        <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[IDPRODUTO]"
-                          dataType="i4"
-                          name="IDPRODUTO" />
-                        <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[PRODUTO]"
-                          codePage="1252"
-                          dataType="str"
-                          length="100"
-                          name="PRODUTO" />
-                        <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[VALOR]"
-                          dataType="numeric"
-                          name="VALOR"
-                          precision="10"
-                          scale="2" />
-                        <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[CUSTO_MEDIO]"
-                          dataType="numeric"
-                          name="CUSTO_MEDIO"
-                          precision="10"
-                          scale="2" />
-                        <externalMetadataColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB].ExternalColumns[ID_CATEGORIA]"
-                          dataType="i4"
-                          name="ID_CATEGORIA" />
-                      </externalMetadataColumns>
-                    </output>
-                    <output
-                      refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB]"
-                      isErrorOut="true"
-                      name="Saída de Erro de Origem OLE DB">
-                      <outputColumns>
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[IDPRODUTO]"
-                          dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[IDPRODUTO]"
-                          name="IDPRODUTO" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUTO]"
-                          codePage="1252"
-                          dataType="str"
-                          length="100"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[PRODUTO]"
-                          name="PRODUTO" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[VALOR]"
-                          dataType="numeric"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[VALOR]"
-                          name="VALOR"
-                          precision="10"
-                          scale="2" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_MEDIO]"
-                          dataType="numeric"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[CUSTO_MEDIO]"
-                          name="CUSTO_MEDIO"
-                          precision="10"
-                          scale="2" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CATEGORIA]"
-                          dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ID_CATEGORIA]"
-                          name="ID_CATEGORIA" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
-                          dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorCode]"
-                          name="ErrorCode"
-                          specialFlags="1" />
-                        <outputColumn
-                          refId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
-                          dataType="i4"
-                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Erro de Origem OLE DB].Columns[ErrorColumn]"
+                          lineageId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -411,9 +407,9 @@
               <paths>
                 <path
                   refId="Package\POPULA AREA STAGE\STAGE PRODUTO.Paths[Saída de Origem OLE DB]"
-                  endId="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  endId="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE.Inputs[Entrada de Destino OLE DB]"
                   name="Saída de Origem OLE DB"
-                  startId="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB.Outputs[Saída de Origem OLE DB]" />
+                  startId="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE.Outputs[Saída de Origem OLE DB]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -500,12 +496,16 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO"
+          TopLeft="6.92857143161234,70.499999943025" />
+        <NodeLayout
           Size="175.2,41.6"
           Id="Package\POPULA AREA STAGE\TRUNCATE ST_PRODUTO"
           TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\POPULA AREA STAGE.PrecedenceConstraints[Restrição]"
-          TopLeft="90.4142857158062,47.1">
+          TopLeft="94.6142857158062,47.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -525,10 +525,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="161.6,41.6"
-          Id="Package\POPULA AREA STAGE\STAGE PRODUTO"
-          TopLeft="6.92857143161234,70.499999943025" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -539,28 +535,28 @@
         <NodeLayout
           Size="229.6,41.6"
           Id="Package\PRODUTO CAMEL CASE\EXECUTA CURSOR CAMEL CASE"
-          TopLeft="38.3714292815146,42.1529410806185" />
+          TopLeft="23.3714292495836,14.6235293400432" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="276,213.6"
           Size="276,256.8"
           Id="Package\PRODUTO CAMEL CASE"
-          TopLeft="295.000000627978,23.7058823321621" />
+          TopLeft="428.571429483745,23.7058823321621" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="249.800000095793,151.611764687114">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.2000005321842,0"
+              EndConnector="178.771429387952,0"
               Start="0,0"
-              End="37.7000005321842,0">
+              End="171.271429387952,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="37.7000005321842,0" />
+                    End="171.271429387952,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -578,27 +574,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB"
-          TopLeft="22.8571429057997,22.9411764504794" />
+          Size="142.4,41.6"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE"
+          TopLeft="317.142857817971,84.8823528667739" />
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB"
-          TopLeft="299.285714922815,29.8235293856233" />
+          Size="148,41.6"
+          Id="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE"
+          TopLeft="52.1428572538556,78.7647058133126" />
         <EdgeLayout
           Id="Package\POPULA AREA STAGE\STAGE PRODUTO.Paths[Saída de Origem OLE DB]"
-          TopLeft="174.8571429058,47.1823529180513">
+          TopLeft="200.142857253856,102.623529340043">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="124.428572017015,0"
+              EndConnector="117.000000564115,0"
               Start="0,0"
-              End="116.928572017015,0">
+              End="109.500000564115,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="116.928572017015,0" />
+                    End="109.500000564115,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -611,15 +607,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\Origem OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\Destino OLE DB">
+    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\STG CLIENTE">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -628,6 +616,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\POPULA AREA STAGE\STAGE PRODUTO\OLTP CLIENTE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
