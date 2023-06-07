@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ACERNITRO5.COMERCIO_DW"
+  DTS:DTSID="{CC7CC756-BFD0-401A-8175-BA21544F1E04}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=ACERNITRO5;Initial Catalog=COMERCIO_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-CARGA_CATEGORIA-{CC7CC756-BFD0-401A-8175-BA21544F1E04}ACERNITRO5.COMERCIO_DW;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
